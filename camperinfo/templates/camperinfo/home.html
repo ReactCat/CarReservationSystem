@@ -1,0 +1,264 @@
+{% extends 'camperinfo/base.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+      <!-- Section Slider -->
+      <section class="slider">
+
+    <ul class="slides">
+      <li>
+        <img src="{% static 'images/ocean.jpg'%}"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Rent A Camper Van In Japan</h3>
+          
+        </div>
+      </li>
+      <li>
+        <img src="{% static 'images/fuji2.jpg'%}"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Experience Japan In A Different Way </h3>
+          
+        </div>
+      </li>
+      <li>
+        <img src="{% static 'images/girlmountains.png'%}"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>See Beautiful Scenery And Nature</h3>
+          
+        </div>
+      </li>
+
+
+    </ul>
+
+        </section>
+
+  <!-- Section Experience Camping -->
+  <section class="section camperhome">
+
+    <div class="container">
+      <div class="row">
+        <div col l8></div>
+        <h5 class="center"><span class="white-text">Experience</span> Camping In Japan</h5>
+        <p class="center experience">Rent A Camper Van To See The Beautiful Countryside Of Japan
+        </p>
+      </div>
+
+    </div>
+
+
+    </section>
+
+
+
+
+
+
+
+<br>
+
+
+
+<!-- Section Contact -->
+<section class="section ">
+
+
+    
+  <div class="container">
+    <h5 class="center tit"> Our Camper Van Selection</h5>
+
+
+    <div class="row ">
+
+
+      
+
+     <h3></h3> 
+      <p></p>
+
+    
+
+
+      <div class="col  l6 ">
+        {% for info in camperinfo1 %}
+        
+ <div>
+
+     <div class="camperdetail">
+        <a href="#"><img src="{{ info.camperimage.url }}"></a> 
+</div>
+
+</p>
+
+
+
+ </div>
+</div>
+
+<div class="col  l6 ">
+    
+    
+
+ 
+<div>
+<h4 class=""> {{ info.campername}}</h4>
+
+
+<p class="par1">{{ info.camperinfo}}</p>
+
+<p><a class ="white-text  btn btn check2" href="{% url 'camper1' %}">More Details</a></p>
+
+
+<br />
+
+  <br />
+    <br />
+    <br />
+
+
+
+</div>
+</div>
+{% endfor %}
+
+
+
+    </div>
+
+    <div class="row ">
+      
+
+      <div class="col  l6 ">
+        {% for info in camperinfo2 %}
+        <div>
+        <h4> {{ info.campername}}</h4>
+
+        <p class="par1">{{ info.camperinfo}}</p>
+        <p><a class ="white-text  btn btn check2" href="{% url 'camper2' %}">More Details</a></p>
+
+
+        </div>
+        </div>
+          
+
+        <div class="col  l6 ">
+          <div>
+
+              <div class="camper2home">
+               
+                 <a href="#"><img src="{{ info.camperimage.url }}"></a> 
+                
+         </div>
+         {% endfor %} 
+         </p>
+
+
+
+         <br />
+          </div>
+         </div>
+
+       
+
+
+         
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Popular Places -->
+<section class="section ">
+    <div class="container">
+
+      <br />
+
+      <div class="row">
+        <h4 class="center"><span class="teal-text">Popular</span> Camping Areas</h4>
+        
+        <div class="col  l4 ">
+          {% for campinfo in campinginfo %}
+          <div>
+       
+              <div class="">
+              <img src="{% static 'images/camp1.jpg'%}" alt="">
+       </div>
+       <h5>{{ campinfo.campingtit1}}</h5>
+       <p>{{ campinfo.campinginfo1}}</p>
+       <a href="{% url 'campingsitesinjapan' %}">More Info</a>
+     
+       
+
+          </div>
+         
+        </div>
+        <div class="col  l4 ">
+         
+          <div>
+       
+              <div class="">
+              <img src="{% static 'images/camp2.jpg'%}" alt="">
+       </div>
+       <h5>{{ campinfo.campingtit2}}</h5>
+       <p>{{ campinfo.campinginfo2}}</p>
+       <a href="{% url 'campingsitesinjapan' %}">More Info</a>
+   
+       
+          </div>
+         
+        </div>
+        <div class="col  l4 ">
+        
+          <div>
+       
+              <div class="">
+              <img src="{% static 'images/camp1.jpg'%}" alt="">
+       </div>
+       <h5>{{ campinfo.campingtit3}}</h5>
+       <p>{{ campinfo.campinginfo3}}</p>
+       <a href="{% url 'campingsitesinjapan' %}">More Info</a>
+      
+       
+          </div>
+          {% endfor %}
+        </div>
+
+
+        </div>
+        <br/>
+        <br/>
+
+      </div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+{% endblock  %}

@@ -1,0 +1,78 @@
+{% extends 'camperadmin/base2.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/> 
+    <link href="{% static 'css/campercheck.css'%}" rel="stylesheet">
+    
+
+    <title>Book A Camper </title>
+</head>
+<body>
+
+
+   
+    
+
+    <div class="container checkform">
+        <div class="row">
+            <div class="col l4 ">
+                <form id="booking-form" action="" method="POST">
+
+                    {% csrf_token %}
+                    <!-- {{ form.as_p}} -->
+    
+                    
+                    <div class="input-div">
+                        <label for="id_camper_type">Anthony Camper : </label>
+                        <select name="camper_type" id="id_camper_type">
+                            <option value="ANTHONY">Anthony Camper</option>
+
+                        </select>
+                    </div>
+                    <div class="input-div">
+                        <label for="id_booker">Booker Name: </label>
+                        <input type="text" required id="id_booker" name="booker">
+                       
+                    </div>
+                    <div class="input-div">
+                        <label for="id_pickup">Pickup : </label>
+                        <input type="datetime-local" required id="id_pickup" name="pickup">
+                    </div>
+                    <div class="input-div">
+                        <label for="id_dropoff">Pickup : </label>
+                        <input type="datetime-local" required id="id_dropoff" name="dropoff">
+                    </div>
+
+                    
+    
+                   
+                    <div class="input-div">
+                        <button type="submit">Book Anthony Camper</button>
+                    </div> 
+    
+                </form>
+
+            </div>
+           
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
+
+{% endblock  %}

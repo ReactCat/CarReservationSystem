@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #3D8361;
+    color: rgb(236, 235, 228);
+    line-height: 2;
+    height: 100vh;
+    ;
+}
+
+.checkform {
+    margin: 160px 50px 160px 200px !important;
+
+    
+    
+    
+    
+  }
+
+  .input-div label{
+    font-size: 20px;
+    color: #bdbdbd ;
+  }
+
+  .input-div button{
+    background-color: #616161;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+  }
+
+
+  
+
+ 
+  .input-div button:hover{
+    background-color: #424242;
+    color: #e0e0e0;
+    
+  }

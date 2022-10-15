@@ -1,0 +1,111 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    color: #3D3C42;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    columns: white;
+  }
+
+  a {
+    color: teal;
+  }
+  
+
+/* Camper Icon Styles */
+
+.icon {
+  position: relative;
+  top: 7px;
+  left: 0px;
+  margin-right: 10px;
+}
+
+
+
+
+  /* Camper Home Page */
+
+
+.camperhome {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    background-color: #4db6ac;
+    
+    
+  }
+
+  
+  
+  
+  
+  .section-camperrentals .par1{
+    margin-right: 60px;
+    margin-bottom: 20px;
+    
+    
+  }
+  
+  
+  /* Camper Check Availability And More Details Buttons */
+
+.btn.check2 {
+ background-color:  #4db6ac;
+ margin-top: 10px;
+}
+
+.btn.check2:hover{
+  color: #eeeeee  ;
+  background-color: #424242;
+}
+
+/* Camper1 and Camper2 detail pages */
+
+.camperdetail {
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+ }
+ 
+
+
+
+
+
+
+/* Camper About Page */
+
+.contact {
+  background-color: #bdbdbd  ;
+  padding: 20px;
+ }
+ 
+ 
+ .contact a {
+  color: teal;
+  font-size: 22px;
+}
+
+
+/* Camper Footer */
+
+.page-footer .ul .li {
+  color: white;
+  padding: 20px;
+ }
+ 
+ 
+ 
+
+ 

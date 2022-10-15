@@ -1,0 +1,66 @@
+{% extends 'camperadmin/base2.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+    
+  <!-- Section Experience Camping -->
+  <section class="section-camperhome">
+
+    <div class="container">
+      <div class="row">
+        <h5 class="center"><span class="teal-text"></span> Camper Administration</h5>
+        <br>
+
+        <div class="col s6">
+            <h5 class="center"><span class="teal-text"></span> </h5>
+            <div>
+              <p class="center"><a class =" white-text  btn-large check2" href="{% url 'camperinquiry' %}">Camper Inquiries</a></p>
+
+            </div>
+            
+
+        </div>
+        
+      <div class="col s6">
+        <h5 class="center"><span class="teal-text"></span> </h5>
+        <div>
+          <p class="center"><a class =" white-text  btn-large check2" href="{% url 'camperbooking' %}">Camper Bookings</a></p>
+
+        </div>
+        
+    </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+
+    </section>
+    <br/>
+    <br/>
+
+
+
+
+
+
+
+<br>
+
+</section>
+
+
+
+
+
+
+
+{% endblock  %}

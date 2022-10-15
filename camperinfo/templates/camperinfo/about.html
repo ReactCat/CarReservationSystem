@@ -1,0 +1,128 @@
+{% extends 'camperinfo/base.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+     
+  <!-- Section Experience Camping -->
+  <section class="section-camperhome">
+
+    <div class="container">
+      {% for info in aboutinfo %}
+      <div class="row">
+        <div col l8></div>
+        <h5 class="center"><span class="teal-text">Renting A Camper Van</span> with Journey Japan</h5>
+        <p class="center">{{ info.maindesc}}</p>
+      </div>
+    
+
+    </div>
+
+
+    </section>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Section About -->
+<section>
+
+  
+    
+  <div class="container">
+   
+
+    <div class="row ">
+
+
+
+<div class="col  s12 ">
+    
+    
+   
+    
+<br>
+            <h5 class="teal-text contactspace"><i class="material-icons icon">chevron_right</i>{{ info.tit1}}</h5>
+            
+            <p>{{ info.content1 | linebreaks}}</p>
+           
+    
+    
+ <br>
+ <br>
+ <h5 class="teal-text contactspace"><i class="material-icons icon">chevron_right</i>{{ info.tit2}}</h5>
+            
+ <p>{{ info.content2 | linebreaks}}</p>
+
+ <br>
+ <br>
+ 
+ <br>
+ 
+
+ 
+</div>
+
+  </div>
+</div>
+
+{% endfor %}
+</section>
+
+
+
+
+<section>
+  <div class="container ">
+    <p class="contact">
+      <i class="material-icons icon"></i>
+      If you have any inquiries, please contact us anytime:   
+      <i class="material-icons icon">mail </i><a href="mailto:email@example.com?subject=General Inquiry To Journey-Japan">Send Email </a></p>
+
+  </div>
+    
+  
+  
+  
+
+
+
+
+</section>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock  %}

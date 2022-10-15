@@ -1,0 +1,158 @@
+{% extends 'camperinfo/base.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+
+
+
+
+<!-- Section Contact -->
+  <section id="camper1" class="section-camper1 ">
+
+    <div class="container">
+     
+
+
+      <div class="row ">
+        {% for info in camperinfo %}
+        <div class="col  l6 ">
+         
+   <div>
+
+       <div class="camperdetail">
+        <a href="#"><img src="{{ info.camperimage.url }}"></a>
+</div>
+<p class="rental-rate">Rental Rate/Day(円): <span class="rental-price">{{ info.camperprice }}</span>
+  </p>
+
+
+     
+
+<br />
+<br />
+   </div>
+ </div>
+ 
+
+ <div class="col  l6 ">
+<div>
+<h4 class="teal-text"> {{ info.campername}}</h4>
+
+<p class="par1">{{ info.camperinfo2}}</p>
+
+
+<br />
+
+<table>
+        <thead>
+
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><i class="material-icons icon">person</i> {{ info.passenger}} passengers</td>
+
+
+          </tr>
+          
+         
+          <tr>
+            <td><i class="material-icons icon">navigation</i> {{ info.carnavi}}</td>
+
+
+          </tr>
+          <tr>
+            <td><i class="material-icons icon">tune</i>{{ info.transmission}}</td>
+
+
+          </tr>
+          <tr>
+            <td><i class="material-icons icon">terrain</i>{{ info.wheeldrive}}</td>
+
+
+          </tr>
+          
+          <tr>
+            <td><i class="material-icons icon">pets</i>{{ info.petsok}}</td>
+
+
+          </tr>
+        </tbody>
+      </table>
+    <br />
+      <br />
+      
+
+<br />
+
+<p><a class ="white-text  btn btn-large check2" href="{% url 'anthonycamper' %}">Check Availability</a></p>
+
+
+<br />
+<br />
+  <br />
+  
+
+</div>
+</div>
+
+
+{% endfor %}
+      </div>
+
+      <div class="row">
+        <div class="container"></div>
+      </div>
+
+     
+
+    </div>
+</section>
+
+    <!-- Section Photo Gallery -->
+      <section class="section section-gallery ">
+        <div class="container">
+          
+          <div class="row">
+            <div class="col s12 m3">
+              <img src="{% static 'images/anthony.jpg'%}"
+              alt="" class="materialboxed width responsive-img">
+            </div>
+            <div class="col s12 m3">
+              <img src="{% static 'images/anthony.jpg'%}"
+              alt=""  class="materialboxed responsive-img">
+            </div>
+            <div class="col s12 m3">
+              <img src="{% static 'images/anthony.jpg'%}"
+              alt="" class="materialboxed responsive-img">
+            </div>
+            <div class="col s12 m3">
+              <img src="{% static 'images/anthony.jpg'%}"
+              alt="" class="materialboxed responsive-img">
+            </div>
+          </div>
+          
+
+
+        </div>
+        <br />
+        
+       
+    
+      </section>
+
+
+     
+
+
+
+
+
+
+{% endblock  %}

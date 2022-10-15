@@ -1,0 +1,65 @@
+{% extends 'camperadmin/base2.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+    
+  <!-- Section Experience Camping -->
+  <section class="section-camperhome">
+
+    <div class="container">
+      <div class="row">
+        <h5 class="center"><span class="teal-text"></span> Camper Inquiries</h5>
+<br>
+        <div class="col s6">
+           
+            <div>
+              <p class="center"><a class =" white-text  btn-large check2" href="{% url 'camperbooking:amitycamperinquiry' %}">Amity Camper Van</a></p>
+
+            </div>
+            
+
+        </div>
+        
+      <div class="col s6">
+       
+        <div>
+          <p class="center"><a class =" white-text  btn-large check2" href="{% url 'camperbooking:anthonycamperinquiry' %}">Anthony Camper Van</a></p>
+
+        </div>
+       
+    </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+
+    </section>
+    <br/>
+    <br/>
+
+
+
+
+
+
+
+<br>
+
+</section>
+
+
+
+
+
+
+
+{% endblock  %}

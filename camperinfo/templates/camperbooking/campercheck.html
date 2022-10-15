@@ -1,0 +1,80 @@
+{% extends 'camperadmin/base2.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'css/materialize.min.css' %}"  media="screen,projection"/> 
+    <link href="{% static 'css/campercheck.css'%}" rel="stylesheet">
+    
+
+    <title>Check Availability For Amity Camper </title>
+</head>
+<body>
+
+
+   
+    
+
+    <div class="container checkform">
+        <div class="row">
+            <div class="col l4 ">
+                <form id="camper-check" action="" method="POST">
+
+                    {% csrf_token %}
+                    <!-- {{ form.as_p}} -->
+    
+                    
+                     <div class="input-div">
+                        <label for="id_camper_type">Amity Camper  : </label>
+                        <select name="camper_type" id="id_camper_type">
+                            <option value="AMITY">Amity Camper</option>
+
+                        </select>
+                    </div>
+                    <div class="input-div">
+                        <label for="id_booker">Booker Name: </label>
+                        <input type="text" required id="id_booker" name="booker">
+                       
+                    </div>
+
+                    <div class="input-div">
+                        <label for="id_pickup">Pickup : </label>
+                        <input type="datetime-local" required id="id_pickup" name="pickup">
+                       
+                    </div>
+                    <div class="input-div">
+                        <label for="id_dropoff">Dropoff : </label>
+                        <input type="datetime-local" required id="id_dropoff" name="dropoff">
+                    </div>
+
+                     
+    
+                   
+                    <div class="input-div">
+                        <button type="submit">Book Amity Camper</button>
+                    </div> 
+    
+                </form>
+
+            </div>
+           
+        </div>
+
+    </div>
+    
+
+</body>
+</html>
+
+{% endblock  %}

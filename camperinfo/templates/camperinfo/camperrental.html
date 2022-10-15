@@ -1,0 +1,165 @@
+{% extends 'camperinfo/base.html' %}
+
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+    
+  <!-- Section Experience Camping -->
+  <section class="section">
+
+    <div class="container">
+      <div class="container">
+        <h5 class="center tit"> Our Camper Van Selection</h5>
+    
+    
+        <div class="row ">
+
+    </div>
+
+
+    </section>
+
+
+
+
+
+
+<!-- Section Contact -->
+<section id="camperrentals" class="section-camperrentals ">
+
+
+    
+  <div class="container">
+    
+
+
+    <div class="row ">
+
+
+      
+
+     <h3></h3> 
+      <p></p>
+
+    
+
+
+      <div class="col  l6 ">
+        {% for info in camperinfo1 %}
+        
+ <div>
+
+     <div class="camperdetail">
+        <a href="#"><img src="{{ info.camperimage.url }}"></a> 
+</div>
+
+</p>
+
+
+
+ </div>
+</div>
+
+<div class="col  l6 ">
+    
+    
+
+ 
+<div>
+<h4 class="teal-text"> {{ info.campername}}</h4>
+
+
+<p class="par1">{{ info.camperinfo}}</p>
+
+<p><a class ="white-text  btn btn check2" href="{% url 'camper1' %}">More Details</a></p>
+
+
+<br />
+
+  <br />
+    <br />
+    <br />
+
+
+
+</div>
+</div>
+{% endfor %}
+
+
+
+    </div>
+
+    <div class="row ">
+      
+
+      <div class="col  l6 ">
+        {% for info in camperinfo2 %}
+        <div>
+        <h4 class="teal-text"> {{ info.campername}}</h4>
+
+        <p class="par1">{{ info.camperinfo}}</p>
+        <p><a class ="white-text  btn btn check2" href="{% url 'camper2' %}">More Details</a></p>
+
+
+        </div>
+        </div>
+          
+
+        <div class="col  l6 ">
+          <div>
+
+              <div class="camper2home">
+               
+                 <a href="#"><img src="{{ info.camperimage.url }}"></a> 
+                
+         </div>
+         {% endfor %} 
+         </p>
+
+
+
+         <br />
+          </div>
+         </div>
+
+       
+
+
+         
+    </div>
+
+  </div>
+</section>
+<br />
+<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock  %}
